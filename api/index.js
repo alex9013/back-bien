@@ -1,5 +1,6 @@
 // api/index.js
 import "dotenv/config";
+import serverless from "serverless-http";
 import app from "../src/app.js";
 
-export default app; // Express como handler para Vercel
+export const handler = serverless(app);
